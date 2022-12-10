@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    </head>
+    <body>
+        <popup id="fenetre004" style="important" bords="arrondis">
+            <p>Mise en page <code>style="important"</code> et bords arrondis.</p>
+         </popup>
+    </body>
+</html>

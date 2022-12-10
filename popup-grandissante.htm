@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <title>popup qui grandi </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#33FF00">
+  <div align="center">
+    <script language="javascript">
+
+var adresse = "page de base.html"
+      var hauteur = 80//-->regler ici la taille de votre popup
+      var taille = 80
+      var x = 5
+      function go() {
+        varp = window.open("", "", "")//-->mettre le lien de la page entre les guillemets
+        if (!document.layers && !document.all) {
+          varp.location = adresse
+          return
+        }
+        varp.resizeTo(100, 100)
+        varp.moveTo(0, 0)
+        go2()
+      }
+      function go2() {
+        if (hauteur >= screen.availHeight - 3)
+          x = 0
+        varp.resizeBy(5, x)
+        hauteur += 5
+        taille += 5
+        if (taille >= screen.width - 5) {
+          varp.location = index.htm
+          hauteur = 100
+          taille = 100
+          x = 5
+          return
+        }
+        setTimeout("go2()", 15)//-->modifier la vitesse ici
+      }
+
+    </script>
+    <p>pour obtenir votre verset quotidient merci de <a href="javascript:go()">CLIQUEZ ici !</a></p>
+  </div>
+</body>
+
+</html>
